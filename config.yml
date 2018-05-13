@@ -1,0 +1,16 @@
+logging:
+  level: INFO
+  loggers:
+    org.perlhacker: DEBUG
+server:
+  rootPath: /api/
+database:
+  driverClass: org.h2.Driver
+  user: sa
+  url: jdbc:h2:./weightdb
+  properties:
+    charSet: UTF-8
+  maxWaitForConnection: 1s
+  checkConnectionWhileIdle: false
+  minIdleTime: 1 minute
+  validationQuery: "/* MyService Health Check */ SELECT 1"
